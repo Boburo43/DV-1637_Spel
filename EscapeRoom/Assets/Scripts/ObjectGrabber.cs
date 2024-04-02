@@ -15,6 +15,7 @@ public class ObjectGrabber : MonoBehaviour
         {
             if (isGrabbing)
             {
+                grabbedObject.gameObject.GetComponent<BoxCollider>().enabled = true;
                 ReleaseObject();
             }
             else
@@ -58,6 +59,7 @@ public class ObjectGrabber : MonoBehaviour
     {
         if (grabbedObject != null)
         {
+            grabbedObject.gameObject.GetComponent<BoxCollider>().enabled = false;
             Vector3 newPosition = new Vector3(transform.position.x, transform.position.y -0.5f, transform.position.z) + transform.forward;
             grabbedObject.GetComponent<Rigidbody>().MovePosition(newPosition);
         }
