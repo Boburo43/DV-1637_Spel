@@ -10,9 +10,9 @@ public class PlayerMovement : MonoBehaviour
     float horizontalAxis;
     float verticalAxis;
 
-    public Transform orieniton;
+    //public Transform orieniton;
 
-    public CameraController Camera;
+    public Cam Camera;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +41,9 @@ public class PlayerMovement : MonoBehaviour
         if (dir.magnitude > 1)
         {
             dir.Normalize();
-        }
+        } 
         transform.position += dir * speed * Time.fixedDeltaTime;
-        transform.rotation = Quaternion.Euler(0, Camera.rotaionY, 0);
+        transform.rotation = Quaternion.Euler(0, Camera.transform.rotation.y, 0);
     }
 
 }
