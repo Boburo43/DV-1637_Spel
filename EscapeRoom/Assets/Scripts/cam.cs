@@ -5,14 +5,19 @@ public class Cam : MonoBehaviour
 {
     private float x;
     private float y;
-    private Vector3 rotateValue;
+    
+    private float vertSens = 2f;
+    private float horiSens = 2f;
+
+    
 
     void Update()
     {
-        y = Input.GetAxis("Mouse X");
-        x = Input.GetAxis("Mouse Y");
-        Debug.Log(x + ":" + y);
-        rotateValue = new Vector3(x, y * -1, 0);
-        transform.eulerAngles = transform.eulerAngles - rotateValue;
+        y += vertSens * Input.GetAxis("Mouse X");
+        x -= horiSens * Input.GetAxis("Mouse Y");
+
+        x = Mathf.Clamp(x, -65, 65);
+        
+        transform.eulerAngles = new Vector3(x, y, 0);
     }
 }

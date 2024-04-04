@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
             dir.Normalize();
         } 
         transform.position += dir * speed * Time.fixedDeltaTime;
-        transform.rotation = Quaternion.Euler(0, Camera.transform.rotation.y, 0);
+        transform.rotation = Quaternion.Euler(0, Camera.transform.eulerAngles.y, 0);
     }
 
 }
