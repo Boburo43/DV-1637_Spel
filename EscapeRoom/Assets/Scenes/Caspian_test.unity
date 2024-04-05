@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &39389458 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6985575139124951906, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+  m_PrefabInstance: {fileID: 1064800358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &50232708
 GameObject:
   m_ObjectHideFlags: 0
@@ -288,6 +293,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &490931133 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7577421966749715988, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+  m_PrefabInstance: {fileID: 1064800358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &607339437 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2584414531072163411, guid: dd18213f9b062ef41990d5cbd1aa5cc2, type: 3}
@@ -350,72 +360,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec50a960799be54da84b181ffae35f3, type: 3}
---- !u!1001 &677731044
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.3551173
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.0999999
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -4.046958
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6877505556815982415, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: Camera
-      value: 
-      objectReference: {fileID: 1046207151}
-    - target: {fileID: 6985575139124951906, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-      propertyPath: m_Name
-      value: 'Fisch '
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
---- !u!1 &854065482 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6985575139124951906, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-  m_PrefabInstance: {fileID: 677731044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &980015510
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -582,11 +526,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1047621710 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7577421966749715988, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
-  m_PrefabInstance: {fileID: 677731044}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1064800358
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -651,9 +590,21 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6877505556815982415, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 1046207151}
     - target: {fileID: 6985575139124951906, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
       propertyPath: m_Name
       value: Fisch
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661822699987122404, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_Height
+      value: 1.8298879
+      objectReference: {fileID: 0}
+    - target: {fileID: 8661822699987122404, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_Center.y
+      value: 0.08505657
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -695,10 +646,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ActiveChar: 1
-  FischCam: {fileID: 1047621710}
+  FischCam: {fileID: 490931133}
   BarnyCam: {fileID: 1070403200}
   Maincamera: {fileID: 1046207154}
-  Fisch: {fileID: 854065482}
+  Fisch: {fileID: 39389458}
   Barny: {fileID: 607339437}
   camFollowFisch: 0
   CrossFade: {fileID: 50232710}
@@ -1092,5 +1043,4 @@ SceneRoots:
   - {fileID: 1514094222}
   - {fileID: 1840891426}
   - {fileID: 104347037}
-  - {fileID: 677731044}
   - {fileID: 1064800358}
