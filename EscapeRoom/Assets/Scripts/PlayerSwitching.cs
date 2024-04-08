@@ -7,7 +7,7 @@ using UnityEngine.TextCore.Text;
 public class PlayerSwitching : MonoBehaviour
 {
  
-    public int ActiveChar = 0;
+    private int ActiveChar = 1;
 
     public Transform FischCam;
     public Transform BarnyCam;
