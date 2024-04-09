@@ -8,6 +8,9 @@ public class ObjectGrabber : MonoBehaviour
     private GameObject grabbedObject;
     private float grabDistance = 1.5f;
     private float minGrabDistance = .5f;
+    public bool lampOn = false;
+    public GameObject text;
+    public GameObject infrared;
 
     // Update is called once per frame
     void Update()
@@ -41,6 +44,22 @@ public class ObjectGrabber : MonoBehaviour
                 grabbedObject.GetComponent<Rigidbody>().useGravity = false;
                 Physics.IgnoreLayerCollision(7, 7);
                 isGrabbing = true;
+            }
+            if (hit.collider.CompareTag("Button"))
+            {
+                if (lampOn == false)
+                {
+                    Debug.Log("Knapp");
+                    infrared.SetActive(true);
+                    text.SetActive(true);
+                    lampOn = true;
+                }
+                else
+                {
+                    infrared.SetActive(false);
+                    text.SetActive(false);
+                    lampOn = false;
+                }
             }
         }
     }
