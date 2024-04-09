@@ -11,6 +11,7 @@ public class ObjectGrabber : MonoBehaviour
     public bool lampOn = false;
     public GameObject text;
     public GameObject infrared;
+    public PlayerSwitching pS;
 
     // Update is called once per frame
     void Update()
@@ -39,7 +40,6 @@ public class ObjectGrabber : MonoBehaviour
         {
             if (hit.collider.CompareTag("Grabbable"))
             {
-                Debug.Log("OK");
                 grabbedObject = hit.collider.gameObject;
                 grabbedObject.GetComponent<Rigidbody>().useGravity = false;
                 Physics.IgnoreLayerCollision(7, 7);
@@ -49,9 +49,11 @@ public class ObjectGrabber : MonoBehaviour
             {
                 if (lampOn == false)
                 {
-                    Debug.Log("Knapp");
                     infrared.SetActive(true);
-                    text.SetActive(true);
+                    if (pS.camFollowFisch == false)
+                    {
+                        text.SetActive(true);
+                    }
                     lampOn = true;
                 }
                 else
@@ -68,7 +70,6 @@ public class ObjectGrabber : MonoBehaviour
     {
         if (grabbedObject != null)
         {
-            Debug.Log("NO");
             grabbedObject.GetComponent<Rigidbody>().useGravity = true;
             Physics.IgnoreLayerCollision(7, 7, false);
             grabbedObject = null;

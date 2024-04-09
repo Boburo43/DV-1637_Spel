@@ -35,10 +35,11 @@ public class PlayerSwitching : MonoBehaviour
         }
         if (camFollowFisch == true)
         {
+            text.SetActive(false);
             Maincamera.transform.position = FischCam.transform.position;
             Fisch.GetComponent<PlayerMovement>().enabled = true;
             Barny.GetComponent<PlayerMovement>().enabled = false;
-            text.SetActive(false);
+            
 
 
         }

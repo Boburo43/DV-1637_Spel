@@ -16,6 +16,7 @@ public class Cam : MonoBehaviour
         y += vertSens * Input.GetAxis("Mouse X");
         x -= horiSens * Input.GetAxis("Mouse Y");
         Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
 
         x = Mathf.Clamp(x, -65, 65);
         
