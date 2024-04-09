@@ -6,7 +6,9 @@ public class ObjectGrabber : MonoBehaviour
 {
     private bool isGrabbing = false;
     private GameObject grabbedObject;
-    
+    private float grabDistance = 1.5f;
+    private float minGrabDistance = .5f;
+
     // Update is called once per frame
     void Update()
     {
@@ -15,7 +17,6 @@ public class ObjectGrabber : MonoBehaviour
         {
             if (isGrabbing)
             {
-                grabbedObject.gameObject.GetComponent<BoxCollider>().enabled = true;
                 ReleaseObject();
             }
             else
@@ -23,7 +24,7 @@ public class ObjectGrabber : MonoBehaviour
                 GrabObject();
             }
         }
-        if (isGrabbing)
+        if (isGrabbing && grabbedObject != null)
         {
             UpdateObjectPosition();
         }
@@ -37,18 +38,20 @@ public class ObjectGrabber : MonoBehaviour
             {
                 Debug.Log("OK");
                 grabbedObject = hit.collider.gameObject;
-                grabbedObject.GetComponent<Rigidbody>().isKinematic = true;
+                grabbedObject.GetComponent<Rigidbody>().useGravity = false;
+                Physics.IgnoreLayerCollision(7, 7);
                 isGrabbing = true;
             }
         }
     }
 
-    void ReleaseObject()
+    public void ReleaseObject()
     {
-        if (grabbedObject != null) 
+        if (grabbedObject != null)
         {
             Debug.Log("NO");
-            grabbedObject.GetComponent<Rigidbody>().isKinematic=false;
+            grabbedObject.GetComponent<Rigidbody>().useGravity = true;
+            Physics.IgnoreLayerCollision(7, 7, false);
             grabbedObject = null;
             isGrabbing = false;
 
@@ -57,11 +60,13 @@ public class ObjectGrabber : MonoBehaviour
 
     void UpdateObjectPosition()
     {
-        if (grabbedObject != null)
+        float targetDistance = grabDistance;
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit, grabDistance, ~LayerMask.GetMask("Grabbable")))
         {
-            grabbedObject.gameObject.GetComponent<BoxCollider>().enabled = false;
-            Vector3 newPosition = new Vector3(transform.position.x, transform.position.y -0.5f, transform.position.z) + transform.forward;
-            grabbedObject.GetComponent<Rigidbody>().MovePosition(newPosition);
+            targetDistance = Mathf.Min(hit.distance, minGrabDistance);
         }
+        Vector3 targetPosition = transform.position + transform.forward * targetDistance;
+        grabbedObject.transform.position = Vector3.Lerp(grabbedObject.transform.position, targetPosition, Time.deltaTime * 10);
     }
 }
