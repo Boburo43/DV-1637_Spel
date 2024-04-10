@@ -15,14 +15,16 @@ public class Generator : MonoBehaviour
 
     private bool slot1Taken;
     private bool slot2Taken;
-    private bool slot3Taken;
-    private bool slot4Taken;
+    public bool slot3Taken;
+    public bool slot4Taken;
 
-    public List<GameObject> gameObjects;
+
+
+    public List<GameObject> batteries;
 
     private void Start()
     {
-        gameObjects = new List<GameObject>();
+        batteries = new List<GameObject>();
         slot1Taken = false;
         slot2Taken = false;
         slot3Taken = false;
@@ -32,35 +34,29 @@ public class Generator : MonoBehaviour
 
     private void Update()
     {
-
-
-
-
-
-
         if (slot1Taken)
         {
-            gameObjects[0].transform.position = slot1.transform.position;
-            gameObjects[0].transform.rotation = slot1.transform.rotation;
-            gameObjects[0].GetComponent<BoxCollider>().enabled = false;
+            batteries[0].transform.position = slot1.transform.position;
+            batteries[0].transform.rotation = slot1.transform.rotation;
+            batteries[0].GetComponent<BoxCollider>().enabled = false;
         }
         if (slot2Taken)
         {
-            gameObjects[1].transform.position = slot2.transform.position;
-            gameObjects[1].transform.rotation = slot2.transform.rotation;
-            gameObjects[1].GetComponent<BoxCollider>().enabled = false;
+            batteries[1].transform.position = slot2.transform.position;
+            batteries[1].transform.rotation = slot2.transform.rotation;
+            batteries[1].GetComponent<BoxCollider>().enabled = false;
         }
         if(slot3Taken)
         {
-            gameObjects[2].transform.position = slot3.transform.position;
-            gameObjects[2].transform.rotation = slot3.transform.rotation;
-            gameObjects[2].GetComponent<BoxCollider>().enabled = false;
+            batteries[2].transform.position = slot3.transform.position;
+            batteries[2].transform.rotation = slot3.transform.rotation;
+            batteries[2].GetComponent<BoxCollider>().enabled = false;
         }
         if (slot4Taken)
         {
-            gameObjects[3].transform.position = slot4.transform.position;
-            gameObjects[3].transform.rotation = slot4.transform.rotation;
-            gameObjects[3].GetComponent<BoxCollider>().enabled = false;
+            batteries[3].transform.position = slot4.transform.position;
+            batteries[3].transform.rotation = slot4.transform.rotation;
+            batteries[3].GetComponent<BoxCollider>().enabled = false;
         }
 
 
@@ -69,7 +65,7 @@ public class Generator : MonoBehaviour
     {
         if(other.CompareTag("Grabbable"))
         {
-            gameObjects.Add(other.gameObject);
+            batteries.Add(other.gameObject);
             Debug.Log("Ye");
             if (slot1Taken == false)
             {
@@ -99,7 +95,7 @@ public class Generator : MonoBehaviour
     {
         if(other.CompareTag("Grabbable"))
         {
-            gameObjects.Remove(other.gameObject);
+            batteries.Remove(other.gameObject);
             if (slot4Taken == true)
             {
                 slot4Taken = false;
