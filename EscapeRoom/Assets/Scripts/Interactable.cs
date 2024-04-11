@@ -11,10 +11,9 @@ public class Interactable : MonoBehaviour
 {
 
     public Transform InteractSource;
-    public float range;
+    private float range = 1.5f;
     private void Update()
     {
-        Debug.DrawRay(InteractSource.position, InteractSource.forward * range, Color.green);
         if(Input.GetKeyDown(KeyCode.E))
         {
             Ray r = new Ray(InteractSource.position, InteractSource.forward);

@@ -8,15 +8,12 @@ public class ObjectGrabber : MonoBehaviour
     private GameObject grabbedObject;
     private float grabDistance = 1.5f;
     private float minGrabDistance = .5f;
-    public bool lampOn = false;
-    public GameObject text;
-    public GameObject infrared;
-    public PlayerSwitching pS;
+  
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * 3, Color.green);
+        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.green);
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (isGrabbing)
@@ -44,24 +41,6 @@ public class ObjectGrabber : MonoBehaviour
                 grabbedObject.GetComponent<Rigidbody>().useGravity = false;
                 Physics.IgnoreLayerCollision(7, 7);
                 isGrabbing = true;
-            }
-            if (hit.collider.CompareTag("Button"))
-            {
-                if (lampOn == false)
-                {
-                    infrared.SetActive(true);
-                    if (pS.camFollowFisch == false)
-                    {
-                        text.SetActive(true);
-                    }
-                    lampOn = true;
-                }
-                else
-                {
-                    infrared.SetActive(false);
-                    text.SetActive(false);
-                    lampOn = false;
-                }
             }
         }
     }

@@ -18,9 +18,10 @@ public class PlayerSwitching : MonoBehaviour
     public bool camFollowFisch;
     public ObjectGrabber oG;
 
+
     public Animator CrossFade;
 
-    public GameObject text;
+
     private void Start()
     {
         camFollowFisch = true;
@@ -35,23 +36,16 @@ public class PlayerSwitching : MonoBehaviour
         }
         if (camFollowFisch == true)
         {
-            text.SetActive(false);
             Maincamera.transform.position = FischCam.transform.position;
             Fisch.GetComponent<PlayerMovement>().enabled = true;
             Barny.GetComponent<PlayerMovement>().enabled = false;
-            
-
-
         }
         else if (camFollowFisch == false)
         {
             Maincamera.position = BarnyCam.transform.position;
             Fisch.GetComponent<PlayerMovement>().enabled = false;
             Barny.GetComponent<PlayerMovement>().enabled = true;
-            if (oG.lampOn == true)
-            {
-                text.SetActive(true);
-            }
+        
             
         }
 
