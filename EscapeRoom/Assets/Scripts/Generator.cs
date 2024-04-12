@@ -13,8 +13,8 @@ public class Generator : MonoBehaviour
     [SerializeField] private Transform slot3;
     [SerializeField] private Transform slot4;
 
-    private bool slot1Taken;
-    private bool slot2Taken;
+    public bool slot1Taken;
+    public bool slot2Taken;
     public bool slot3Taken;
     public bool slot4Taken;
 
@@ -66,11 +66,11 @@ public class Generator : MonoBehaviour
         if(other.CompareTag("Grabbable"))
         {
             batteries.Add(other.gameObject);
-            Debug.Log("Ye");
+
             if (slot1Taken == false)
             {
                 slot1Taken = true;
-                Debug.Log("Slot1");
+
             }
             else if (slot2Taken == false)
             {
@@ -87,7 +87,7 @@ public class Generator : MonoBehaviour
                
                 slot4Taken = true;
             }
-            else Debug.Log("Worng");
+
         }
     }
 
@@ -112,7 +112,6 @@ public class Generator : MonoBehaviour
             {
                 slot1Taken = false;
             }
-            else Debug.Log("wack");
         }
     }
 }
