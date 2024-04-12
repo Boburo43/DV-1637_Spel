@@ -5,38 +5,42 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-
     [SerializeField] GameObject door;
     [SerializeField] GameObject plate;
     bool isOpened = false;
+    private Vector3 doorClosedPosition;
+    private Vector3 doorOpenPosition;
+    private Vector3 plateOriginalPosition;
+    private float transitionSpeed = 3f;
+
     void Start()
-        {
-
-        }
-
-    void OnTriggerEnter(Collider col)
     {
-        if (isOpened == false)
-        {
-            door.transform.position += new Vector3(0, 0, 3f);
-            plate.transform.position += new Vector3(0, -0.06f, 0);
-            isOpened = true;
-        }
+        doorClosedPosition = door.transform.position;
+        doorOpenPosition = doorClosedPosition + new Vector3(0, 0, 2f);
+        plateOriginalPosition = plate.transform.position;
     }
-    void OnTriggerExit(Collider col)
-    {
-        if (isOpened == true)
-        {
-            door.transform.position += new Vector3(0, 0, -3f);
-            plate.transform.position += new Vector3(0, +0.06f, 0);
-            isOpened = false;
-        }
-    }
-    // Start is called before the first frame update
-    
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (isOpened)   
+        {
+            door.transform.position = Vector3.Lerp(door.transform.position, doorOpenPosition, Time.deltaTime * transitionSpeed);
+            plate.transform.position = new Vector3(plateOriginalPosition.x, plateOriginalPosition.y - 0.06f, plateOriginalPosition.z);
+        }
+        else
+        {
+            door.transform.position = Vector3.Lerp(door.transform.position, doorClosedPosition, Time.deltaTime * transitionSpeed);
+            plate.transform.position = plateOriginalPosition;
+        }
+    }
+
+    void OnTriggerStay(Collider col)
+    {
+        isOpened = true;
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        isOpened = false;
     }
 }
