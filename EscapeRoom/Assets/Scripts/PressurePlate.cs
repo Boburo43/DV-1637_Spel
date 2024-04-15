@@ -16,7 +16,7 @@ public class PressurePlate : MonoBehaviour
     void Start()
     {
         doorClosedPosition = door.transform.position;
-        doorOpenPosition = doorClosedPosition + new Vector3(0, 0, 1.6f);
+        doorOpenPosition = doorClosedPosition + new Vector3(-4f, 0, 0);
         plateOriginalPosition = plate.transform.position;
     }
 
