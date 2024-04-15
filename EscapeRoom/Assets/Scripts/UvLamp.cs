@@ -12,6 +12,11 @@ public class UvLamp : MonoBehaviour, IInteractable
 
     public PlayerSwitching pS;
 
+    private void Start()
+    {
+        
+        redLight.SetActive(false);
+    }
     public void Interact()
     {
         if (lampOn == false)
@@ -31,10 +36,11 @@ public class UvLamp : MonoBehaviour, IInteractable
     {
         if (lampOn == true)
         {
-            if (pS.camFollowFisch == false)
+            if (pS.camFollowFisch == true)
             {
-                text.SetActive(true);
+                text.SetActive(false);
             }
+            else { text.SetActive(true);}
         }
         
     }
