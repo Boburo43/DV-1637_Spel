@@ -7,7 +7,7 @@ public class PressurePlate : MonoBehaviour
 {
     [SerializeField] GameObject door;
     [SerializeField] GameObject plate;
-    bool isOpened = false;
+    [SerializeField] bool isOpened = false;
     private Vector3 doorClosedPosition;
     private Vector3 doorOpenPosition;
     private Vector3 plateOriginalPosition;
@@ -25,7 +25,7 @@ public class PressurePlate : MonoBehaviour
         if (isOpened)   
         {
             door.transform.position = Vector3.Lerp(door.transform.position, doorOpenPosition, Time.deltaTime * transitionSpeed);
-            plate.transform.position = new Vector3(plateOriginalPosition.x, plateOriginalPosition.y - 0.06f, plateOriginalPosition.z);
+            plate.transform.position = new Vector3(plateOriginalPosition.x, plateOriginalPosition.y - 0.02f, plateOriginalPosition.z);
         }
         else
         {
