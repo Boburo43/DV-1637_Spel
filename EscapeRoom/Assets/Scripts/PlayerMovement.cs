@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     //public Transform orieniton;
 
     public Cam Camera;
+    public LayerMask collisionMask; // Define which layers should be checked for collision
+    public float collisionRadius = 0.5f; // Radius for the SphereCast
+    public float checkDistance = 1f; // How far 
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +23,21 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
     }
-
-    private void FixedUpdate()
+    public bool CanMove(Vector3 direction)
     {
+        RaycastHit hit;
+        if (Physics.SphereCast(transform.position, collisionRadius, direction, out hit, checkDistance, collisionMask))
+        {
+            if (hit.collider.CompareTag("Wall")) // Check for collision with objects tagged as "Wall"
+            {
+                return false; // Prevent movement in this direction
+            }
+        }
+        return true; // Allow movement if no colliding tag detected
+    }
+    private void FixedUpdate()
+    {   
+    
         verticalAxis = Input.GetAxis("Vertical");
         horizontalAxis = Input.GetAxis("Horizontal");
 
@@ -35,15 +50,21 @@ public class PlayerMovement : MonoBehaviour
         Vector3 forwardRelative = verticalAxis * camFor;
         Vector3 rightRelative = horizontalAxis * camRight;
 
-        Vector3 moveDir = forwardRelative + rightRelative;
+        Vector3 moveDir = forwardRelative + rightRelative; 
 
         Vector3 dir = new Vector3(moveDir.x, rb.velocity.y, moveDir.z);
+
+        Debug.DrawRay(transform.position, dir);
         if (dir.magnitude > 1)
         {
             dir.Normalize();
         } 
-        transform.position += dir * speed * Time.fixedDeltaTime;
-        transform.rotation = Quaternion.Euler(0, Camera.transform.eulerAngles.y, 0);
+        
+            transform.position += dir * speed * Time.fixedDeltaTime;
+            transform.rotation = Quaternion.Euler(0, Camera.transform.eulerAngles.y, 0);
+      
     }
 
+    
+    
 }

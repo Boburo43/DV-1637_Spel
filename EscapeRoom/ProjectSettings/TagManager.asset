@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Grabbable
   - Button
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Grabbable
   - Players
   - Generator
-  - 
+  - Wall
   - 
   - 
   - 
