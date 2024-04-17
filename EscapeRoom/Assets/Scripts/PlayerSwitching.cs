@@ -14,7 +14,10 @@ public class PlayerSwitching : MonoBehaviour
     public Transform Maincamera;
 
     public GameObject Fisch;
+    public GameObject FischModel;
     public GameObject Barny;
+    public GameObject BarnyModel;
+
     public bool camFollowFisch;
     public ObjectGrabber oG;
 
@@ -38,15 +41,17 @@ public class PlayerSwitching : MonoBehaviour
         {
             Maincamera.transform.position = FischCam.transform.position;
             Fisch.GetComponent<PlayerMovement>().enabled = true;
+            FischModel.SetActive(false);
             Barny.GetComponent<PlayerMovement>().enabled = false;
+            BarnyModel.SetActive(true);
         }
         else if (camFollowFisch == false)
         {
             Maincamera.position = BarnyCam.transform.position;
             Fisch.GetComponent<PlayerMovement>().enabled = false;
+            FischModel.SetActive(true);
             Barny.GetComponent<PlayerMovement>().enabled = true;
-        
-            
+            BarnyModel.SetActive(false);
         }
 
     }

@@ -23,18 +23,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
     }
-    public bool CanMove(Vector3 direction)
-    {
-        RaycastHit hit;
-        if (Physics.SphereCast(transform.position, collisionRadius, direction, out hit, checkDistance, collisionMask))
-        {
-            if (hit.collider.CompareTag("Wall")) // Check for collision with objects tagged as "Wall"
-            {
-                return false; // Prevent movement in this direction
-            }
-        }
-        return true; // Allow movement if no colliding tag detected
-    }
+    
     private void FixedUpdate()
     {   
     
@@ -61,10 +50,6 @@ public class PlayerMovement : MonoBehaviour
         } 
         
             transform.position += dir * speed * Time.fixedDeltaTime;
-            transform.rotation = Quaternion.Euler(0, Camera.transform.eulerAngles.y, 0);
-      
+            transform.rotation = Quaternion.Euler(0, Camera.transform.eulerAngles.y, 0); 
     }
-
-    
-    
 }

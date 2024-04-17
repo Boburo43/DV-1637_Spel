@@ -1577,7 +1577,9 @@ MonoBehaviour:
   BarnyCam: {fileID: 511249189}
   Maincamera: {fileID: 1080927811}
   Fisch: {fileID: 2012116174}
+  FischModel: {fileID: 1054067710}
   Barny: {fileID: 1333045590}
+  BarnyModel: {fileID: 1159505455}
   camFollowFisch: 0
   oG: {fileID: 1080927813}
   CrossFade: {fileID: 1993381239}
@@ -2734,7 +2736,7 @@ GameObject:
   m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &372065417
 Transform:
@@ -4128,6 +4130,10 @@ PrefabInstance:
     - target: {fileID: 4770946812055780586, guid: 5223bf1addcb8d242ab4e5384c068cf2, type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4770946812055780586, guid: 5223bf1addcb8d242ab4e5384c068cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5295703702050285136, guid: 5223bf1addcb8d242ab4e5384c068cf2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5978,6 +5984,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6420227264705033442, guid: 2ad671309cc78a046aaad9c796a9cd94, type: 3}
   m_PrefabInstance: {fileID: 1022254834}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1054067710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5321095448039022683, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+  m_PrefabInstance: {fileID: 1872064326}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1064186232
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,6 +6460,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6417289638683651082, guid: 2c036063e8a9cc940a96f34ffa88a7b6, type: 3}
+      propertyPath: m_Size.x
+      value: 3.7126112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6417289638683651082, guid: 2c036063e8a9cc940a96f34ffa88a7b6, type: 3}
+      propertyPath: m_Center.x
+      value: 0.3690629
+      objectReference: {fileID: 0}
     - target: {fileID: 7793227110380155036, guid: 2c036063e8a9cc940a96f34ffa88a7b6, type: 3}
       propertyPath: m_Name
       value: Table (3)
@@ -6822,6 +6841,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158257395}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1159505455 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1505228007857295288, guid: b2dba142976e6214bb6365d533abe097, type: 3}
+  m_PrefabInstance: {fileID: 1559709248}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1175997310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9062,6 +9086,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1505228007857295288, guid: b2dba142976e6214bb6365d533abe097, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
     - target: {fileID: 4850670775124527605, guid: b2dba142976e6214bb6365d533abe097, type: 3}
       propertyPath: m_Name
       value: Barny
@@ -9117,6 +9145,18 @@ PrefabInstance:
     - target: {fileID: 4913472948943065362, guid: b2dba142976e6214bb6365d533abe097, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555294685099834386, guid: b2dba142976e6214bb6365d533abe097, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934409245653761962, guid: b2dba142976e6214bb6365d533abe097, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6934409245653761962, guid: b2dba142976e6214bb6365d533abe097, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7530565256385891932, guid: b2dba142976e6214bb6365d533abe097, type: 3}
       propertyPath: Camera
@@ -11158,14 +11198,26 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
     - target: {fileID: 3137157472403614193, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
       propertyPath: m_Constraints
-      value: 80
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 3137157472403614193, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
       propertyPath: m_Interpolate
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3137157472403614193, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3137157472403614193, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
       propertyPath: m_CollisionDetection
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321095448039022683, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_Name
+      value: Model
+      objectReference: {fileID: 0}
+    - target: {fileID: 5321095448039022683, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6173210186522299194, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
@@ -11223,6 +11275,10 @@ PrefabInstance:
     - target: {fileID: 6985575139124951906, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
       propertyPath: m_Name
       value: Fisch
+      objectReference: {fileID: 0}
+    - target: {fileID: 7577421966749715988, guid: 3c264c4b4e368064bb11c5e35e63b65d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.044
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
