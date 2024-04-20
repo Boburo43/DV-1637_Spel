@@ -1830,15 +1830,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 224075404}
-<<<<<<< Updated upstream
-  m_Layer: 9
-  m_Name: Walls
-  m_TagString: Wall
-=======
   m_Layer: 0
   m_Name: WallsNormal
   m_TagString: Untagged
->>>>>>> Stashed changes
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
