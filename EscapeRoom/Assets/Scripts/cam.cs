@@ -3,8 +3,8 @@ using System.Collections;
 
 public class Cam : MonoBehaviour
 {
-    private float x;
-    private float y;
+    public float x;
+    public float y;
     
     private float vertSens = 2f;
     private float horiSens = 2f;
@@ -15,7 +15,6 @@ public class Cam : MonoBehaviour
     {
         y += vertSens * Input.GetAxis("Mouse X");
         x -= horiSens * Input.GetAxis("Mouse Y");
-        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
 
         x = Mathf.Clamp(x, -65, 65);
