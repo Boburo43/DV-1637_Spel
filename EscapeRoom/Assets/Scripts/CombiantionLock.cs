@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class CombiantionLock : MonoBehaviour, IInteractable
 {
@@ -10,6 +11,7 @@ public class CombiantionLock : MonoBehaviour, IInteractable
     public GameObject cam;
 
     private bool isActive;
+    private bool isRight;
 
     [SerializeField] GameObject door;
     private Vector3 doorClosedPosition;
@@ -26,15 +28,16 @@ public class CombiantionLock : MonoBehaviour, IInteractable
     {
         canvas.SetActive(false);
         doorClosedPosition = door.transform.position;
-        doorOpenPosition = doorClosedPosition + new Vector3(-5f, 0, 0);
+        doorOpenPosition = doorClosedPosition + new Vector3(-3f, 0, 0);
         buttonPressed = 0;
         isActive = false;
+        isRight = false;
     }
 
     private void Update()
     {
-       
-        if(isActive)
+   
+        if (isActive)
         {
             cam.GetComponent<Cam>().enabled = false;
             Cursor.visible = true;
@@ -49,6 +52,10 @@ public class CombiantionLock : MonoBehaviour, IInteractable
         {
             CheckCode();           
         }   
+        if(isRight)
+        {
+            door.transform.position = Vector3.Lerp(door.transform.position, doorOpenPosition, Time.deltaTime * transitionSpeed);
+        }
     }
 
     public void Interact()
@@ -75,9 +82,9 @@ public class CombiantionLock : MonoBehaviour, IInteractable
     {
         if(atemptedCode == code)
         {
-            door.transform.position = Vector3.Lerp(door.transform.position, doorOpenPosition, Time.deltaTime * transitionSpeed);
+            isRight = true;
             atemptedCode = "";
-            buttonPressed = 0;
+            buttonPressed = 4;
             isActive = false;
         }
         else if(atemptedCode != code)
