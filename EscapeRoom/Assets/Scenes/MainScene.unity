@@ -5817,6 +5817,10 @@ PrefabInstance:
       value: Button
       objectReference: {fileID: 0}
     - target: {fileID: 9175739653184798691, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 205322194}
+    - target: {fileID: 9175739653184798691, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
       propertyPath: cam
       value: 
       objectReference: {fileID: 1080927808}
@@ -5844,6 +5848,10 @@ PrefabInstance:
       propertyPath: codeText
       value: 
       objectReference: {fileID: 1947153728}
+    - target: {fileID: 9175739653184798691, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15293,6 +15301,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9175739653184798691, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
+      propertyPath: ps
+      value: 
+      objectReference: {fileID: 205322194}
     - target: {fileID: 9175739653184798691, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
       propertyPath: cam
       value: 
