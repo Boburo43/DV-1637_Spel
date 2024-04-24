@@ -11,14 +11,14 @@ public class Interactable : MonoBehaviour
 {
 
     public Transform InteractSource;
-    private float range = 2.5f;
+    private float range = 3f;
     private void Update()
     {
-        Debug.DrawLine(InteractSource.position, InteractSource.forward, Color.green);
-        if(Input.GetKeyDown(KeyCode.E))
+        
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Ray r = new Ray(InteractSource.position, InteractSource.forward);
-            if(Physics.Raycast(r, out RaycastHit hitinfo, range))
+            if(Physics.Raycast(r, out RaycastHit hitinfo, range, 7))
             {
                 if(hitinfo.collider.gameObject.TryGetComponent(out IInteractable interactObj))
                 {

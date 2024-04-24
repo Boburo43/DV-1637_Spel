@@ -13,7 +13,7 @@ public class ObjectGrabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, transform.forward * 1.5f, Color.green);
+        Debug.DrawRay(transform.position, transform.forward * 3, Color.green);
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (isGrabbing)

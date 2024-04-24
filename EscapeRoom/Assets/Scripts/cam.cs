@@ -8,7 +8,6 @@ public class Cam : MonoBehaviour
     
     private float vertSens = 2f;
     private float horiSens = 2f;
-
     
 
     void Update()

@@ -7,10 +7,12 @@ using Unity.VisualScripting;
 public class CombiantionLock : MonoBehaviour, IInteractable
 {
     [SerializeField] private GameObject canvas;
+    public GameObject Fisch;
+    public GameObject Barny;
 
     public GameObject cam;
 
-    private bool isActive;
+    public bool isActive;
     private bool isRight;
 
     [SerializeField] GameObject door;
@@ -36,17 +38,20 @@ public class CombiantionLock : MonoBehaviour, IInteractable
 
     private void Update()
     {
-   
         if (isActive)
         {
             cam.GetComponent<Cam>().enabled = false;
-            Cursor.visible = true;
+            Fisch.GetComponent<PlayerMovement>().enabled = false;
+            Barny.GetComponent<PlayerMovement>().enabled = false;
+            CurserScrip.cursurActive = true;
         }
         else if(!isActive)
         {
-            Cursor.visible = false;
+            CurserScrip.cursurActive = false;
             cam.GetComponent<Cam>().enabled = true;
             canvas.SetActive(false);
+            Fisch.GetComponent<PlayerMovement>().enabled = true;
+            Barny.GetComponent<PlayerMovement>().enabled = true;
         }
         if(buttonPressed == 4)
         {

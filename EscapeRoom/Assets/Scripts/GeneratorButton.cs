@@ -13,14 +13,40 @@ public class GeneratorButton : MonoBehaviour, IInteractable
 
     public Animator anim;
 
-    public GameObject door;
+    public GameObject doorF;
+    public GameObject doorB;
     public Transform dropPoint;
     public Transform dropPoint2;
     public Transform dropPoint3;
     public Transform dropPoint4;
 
-    public bool right;
+    private bool right;
+    private bool openDoor;
 
+    private Vector3 doorFClosedPosition;
+    private Vector3 doorBClosedPosition;
+    private Vector3 doorFOpenPosition;
+    private Vector3 doorBOpenPosition;
+    private float transitionSpeed = 3f;
+
+
+    private void Start()
+    {
+        doorFClosedPosition = doorF.transform.position;
+        doorBClosedPosition = doorB.transform.position;
+        doorFOpenPosition = doorFClosedPosition + new Vector3(-3f, 0, 0);
+        doorBOpenPosition = doorBClosedPosition + new Vector3(-3f, 0, 0);
+        openDoor = false;
+    }
+
+    private void Update()
+    {
+        if(openDoor)
+        {
+            doorF.transform.position = Vector3.Lerp(doorF.transform.position, doorFOpenPosition, Time.deltaTime * transitionSpeed);
+            doorB.transform.position = Vector3.Lerp(doorB.transform.position, doorBOpenPosition, Time.deltaTime * transitionSpeed);
+        }
+    }
     public void CheckRight()
     {
         if (gen.slot3Taken)
@@ -31,8 +57,7 @@ public class GeneratorButton : MonoBehaviour, IInteractable
                 {
                     if (gen.batteries[2] == blue)
                     {
-                        right = true;
-                                             
+                        right = true;                    
                     }
                 }
             }
@@ -46,7 +71,7 @@ public class GeneratorButton : MonoBehaviour, IInteractable
         anim.SetTrigger("Press");
         if(right == true)
         {
-            door.SetActive(false);
+            openDoor = true;
         }
         else if(right == false)
         {
