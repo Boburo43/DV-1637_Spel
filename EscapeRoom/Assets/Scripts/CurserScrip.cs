@@ -10,12 +10,12 @@ public class CurserScrip : MonoBehaviour
     public Texture2D sprite;
     public GameObject croshair;
 
-    public static bool cursurActive;
+     public static bool cursurActive;
 
     // Update is called once per frame
     void Update()
     {
-
+        Debug.Log(cursurActive);
         Cursor.SetCursor(sprite, Vector3.zero, CursorMode.ForceSoftware);
         if(cursurActive)
         {

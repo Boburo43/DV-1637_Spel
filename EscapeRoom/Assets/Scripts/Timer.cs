@@ -5,29 +5,32 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float TimeLeft;
-    public bool TimerOn = false;
+    public float timeLeft = 3f;
+    public bool timerOn = false;
+    [SerializeField] private Cam Camera;
+    public static bool lose = false;
 
     public TMP_Text TimerTxt;
     // Start is called before the first frame update
     void Start()
     {
-        TimerOn = true;
+        timerOn = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(TimerOn)
+        if(timerOn)
         {
-            if(TimeLeft > 0)
+            if(timeLeft > 0)
             {
-                TimeLeft -= Time.deltaTime;
-                updateTimer(TimeLeft);
+                timeLeft -= Time.deltaTime;
+                updateTimer(timeLeft);
+                lose = false;
             }
             else
             {
-                Time.timeScale = 0f;
+                lose = true;
             }
         }
     }
@@ -38,6 +41,6 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimerTxt.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        TimerTxt.text = string.Format("Time left: {0:00} : {1:00}", minutes, seconds);
     }
 }
