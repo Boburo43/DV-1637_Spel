@@ -5,7 +5,7 @@ using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    public float timeLeft = 3f;
+    private float timeLeft = 600f;
     public bool timerOn = false;
     [SerializeField] private Cam Camera;
     public static bool lose = false;
@@ -41,6 +41,6 @@ public class Timer : MonoBehaviour
         float minutes = Mathf.FloorToInt(currentTime / 60);
         float seconds = Mathf.FloorToInt(currentTime % 60);
 
-        TimerTxt.text = string.Format("Time left: {0:00} : {1:00}", minutes, seconds);
+        TimerTxt.text = string.Format("Battery left: {0:00} : {1:00}", minutes, seconds);
     }
 }

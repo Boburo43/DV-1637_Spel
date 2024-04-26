@@ -37,22 +37,36 @@ public class GameState : MonoBehaviour
             isPaused = true;  
         }
 
-        if(!isPaused || !isLost)
+        if(!isLost)
+        {
+            Time.timeScale = 1;
+            loseMenu.SetActive(false);
+            CurserScrip.cursurActive = false;
+        }
+        else if (isLost)
+        {
+            Time.timeScale = 0;
+            loseMenu.SetActive(true);
+            CurserScrip.cursurActive = true;
+            Cursor.visible = true;
+        }
+
+        if(!isPaused)
         {
             Time.timeScale = 1;
             pauseMenu.SetActive(false);
             CurserScrip.cursurActive = false;
         }
-        else if (isPaused || isLost)
+        else if (isPaused)
         {
             Time.timeScale = 0;
             pauseMenu.SetActive(true);
-            CurserScrip.cursurActive = true;
+            Cursor.visible = true;
         }
-        
+
         // LoseScreen
 
-        
+
     }
     public void MainMenu () 
     {
