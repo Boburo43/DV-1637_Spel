@@ -120,12 +120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
+  Fisch: {fileID: 0}
+  Barny: {fileID: 0}
+  ps: {fileID: 0}
   cam: {fileID: 0}
   door: {fileID: 0}
   buttonPressed: 0
-  code: 0000
+  code: 
   atemptedCode: 
   codeText: {fileID: 0}
+  codeHint: {fileID: 0}
 --- !u!1 &466466905041349548
 GameObject:
   m_ObjectHideFlags: 0

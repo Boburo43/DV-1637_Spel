@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using Unity.VisualScripting;
+
 
 public class CombiantionLock : MonoBehaviour, IInteractable
 {
@@ -21,14 +21,22 @@ public class CombiantionLock : MonoBehaviour, IInteractable
     private Vector3 doorOpenPosition;
     private float transitionSpeed = 3f;
 
+
+    const string numbers = "0123456789";
     public int buttonPressed;
     public string code = "";
     public string atemptedCode = "";
     public TMP_Text codeText;
 
-
+    public TMP_Text codeHint;
     void Start()
     {
+        int charAmount = Random.Range(4, 4);
+        for (int i = 0; i < charAmount; i++)
+        {
+            code += numbers[Random.Range(0, numbers.Length)];
+        }
+
         canvas.SetActive(false);
         doorClosedPosition = door.transform.position;
         doorOpenPosition = doorClosedPosition + new Vector3(-3f, 0, 0);
@@ -39,7 +47,7 @@ public class CombiantionLock : MonoBehaviour, IInteractable
 
     private void Update()
     {
-        
+        codeHint.text = code;
         if (isActive)
         {
             cam.GetComponent<Cam>().enabled = false;
@@ -98,20 +106,25 @@ public class CombiantionLock : MonoBehaviour, IInteractable
         buttonPressed += 1;
         atemptedCode = atemptedCode + buttons;
         codeText.text = atemptedCode;
+        FindObjectOfType<AudioManager>().PlaySound("ButtonPressed");
     }
     public void CheckCode()
     {
         if(atemptedCode == code)
         {
+            FindObjectOfType<AudioManager>().PlaySound("RightCode");
             isRight = true;
             atemptedCode = "";
             buttonPressed = 4;
             isActive = false;
+            
         }
         else if(atemptedCode != code)
         {
+            FindObjectOfType<AudioManager>().PlaySound("WrongCode");
             atemptedCode = "";
             buttonPressed = 0;
+            
         }
     }
 }
