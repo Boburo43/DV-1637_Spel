@@ -115,7 +115,7 @@ public class CombiantionLock : MonoBehaviour, IInteractable
             FindObjectOfType<AudioManager>().PlaySound("RightCode");
             isRight = true;
             atemptedCode = "";
-            buttonPressed = 4;
+            buttonPressed = 0;
             isActive = false;
             
         }
