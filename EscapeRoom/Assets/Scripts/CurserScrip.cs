@@ -15,7 +15,7 @@ public class CurserScrip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(cursurActive);
+        
         Cursor.SetCursor(sprite, Vector3.zero, CursorMode.ForceSoftware);
         if(cursurActive)
         {
