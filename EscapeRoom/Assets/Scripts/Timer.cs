@@ -6,8 +6,8 @@ using UnityEngine.Playables;
 
 public class Timer : MonoBehaviour
 {
-    public static float timeLeft = 900f;
-    private float totalTime = 900f;
+    private float timeLeft = 600f;
+    private float totalTime = 600f;
     public bool timerOn = true;
     [SerializeField] private Cam Camera;
     public static bool lose = false;

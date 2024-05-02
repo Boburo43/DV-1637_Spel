@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObjectGrabber : MonoBehaviour
 {
     private bool isGrabbing = false;
-    public GameObject grabbedObject;
+    private GameObject grabbedObject;
     private float grabDistance = 1.5f;
     private float minGrabDistance = .5f;
   
