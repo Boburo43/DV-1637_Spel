@@ -5772,7 +5772,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 575768884}
+  m_GameObject: {fileID: 575768884} 
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
