@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeLeft = 900f;
         timerOn = true;
         HalfTimeText.gameObject.SetActive(false);
     }
