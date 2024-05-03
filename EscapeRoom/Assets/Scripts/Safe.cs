@@ -51,6 +51,7 @@ public class Safe : MonoBehaviour, IInteractable
         {
             cam.GetComponent<Cam>().enabled = false;
             CurserScrip.cursurActive = true;
+            Cursor.visible = true;
             if (ps.camFollowFisch)
             {
                 Fisch.GetComponent<PlayerMovement>().enabled = false;
@@ -65,6 +66,7 @@ public class Safe : MonoBehaviour, IInteractable
         else if (!isActive)
         {
             CurserScrip.cursurActive = false;
+            
             cam.GetComponent<Cam>().enabled = true;
             canvas.SetActive(false);
             if (ps.camFollowFisch)

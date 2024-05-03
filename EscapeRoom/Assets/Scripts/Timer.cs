@@ -6,8 +6,8 @@ using UnityEngine.Playables;
 
 public class Timer : MonoBehaviour
 {
-    private float timeLeft = 600f;
-    private float totalTime = 600f;
+    public static float timeLeft = 900f;
+    private float totalTime = 900f;
     public bool timerOn = true;
     [SerializeField] private Cam Camera;
     public static bool lose = false;
@@ -19,6 +19,7 @@ public class Timer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timeLeft = 900f;
         timerOn = true;
         HalfTimeText.gameObject.SetActive(false);
     }
