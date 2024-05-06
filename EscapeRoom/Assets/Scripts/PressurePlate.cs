@@ -34,12 +34,12 @@ public class PressurePlate : MonoBehaviour
         }
     }
 
-    void OnTriggerStay(Collider col)
+    private void OnTriggerStay(Collider col)
     {
         isOpened = true;
     }
 
-    void OnTriggerExit(Collider col)
+    private void OnTriggerExit(Collider col)
     {
         isOpened = false;
     }

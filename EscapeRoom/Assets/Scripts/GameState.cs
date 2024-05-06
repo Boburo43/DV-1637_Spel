@@ -8,7 +8,6 @@ public class GameState : MonoBehaviour
 {
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject loseMenu;
-    //[SerializeField] private GameObject winMenu;
     public bool isPaused = false;
     public bool isLost = false;
     // Start is called before the first frame update
@@ -37,6 +36,7 @@ public class GameState : MonoBehaviour
             isPaused = true;  
         }
 
+        // LoseScreen
         if(!isLost)
         {
             Time.timeScale = 1;
@@ -64,7 +64,6 @@ public class GameState : MonoBehaviour
             Cursor.visible = true;
         }
 
-        // LoseScreen
 
 
     }

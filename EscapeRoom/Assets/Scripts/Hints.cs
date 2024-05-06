@@ -7,28 +7,37 @@ using UnityEngine;
 public class Hints : MonoBehaviour
 {
     [SerializeField] private GameObject qHint;
-    public bool showQ = true;
+    bool showQ = false;
+    bool showH = false;
 
     // Start is called before the first frame update
     void Start()
     {
         qHint.SetActive(false);
     }
-    void OnTriggerStay(Collider col)
+
+    // Update is called once per frame
+    void Update()
     {
         if (showQ)
         {
             qHint.SetActive(true);
-            if(Input.GetKey(KeyCode.Q))
+            if (Input.GetKey(KeyCode.Q))
             {
                 showQ = false;
+                showH = true;
             }
         }
-        
+        else
+        {
+            qHint.SetActive(false);
+        }
     }
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider col)
     {
-        
+        if (!showH)
+        {
+            showQ = true;
+        }
     }
 }
