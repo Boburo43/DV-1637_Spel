@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -30,8 +29,7 @@ public class Win : MonoBehaviour
         if (win == true)
         {
             Time.timeScale = 0f;
-            
-         
+           
             winScreen.SetActive(true);
             Timertext.text = string.Format("You had: {0:00} : {1:00} left" , minutes, seconds);
         }
@@ -41,14 +39,13 @@ public class Win : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             win = true;
-            
             timeCompleted = Timer.timeLeft;
         }
     }
 
     public void Mainmenu()
     {
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("MainMenu");
     }
 }
 
