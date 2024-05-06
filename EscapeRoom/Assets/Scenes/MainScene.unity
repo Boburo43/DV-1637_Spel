@@ -1550,15 +1550,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   - {fileID: 1326414140}
   - {fileID: 4302346438054388461}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-  - {fileID: 1326414140}
->>>>>>> parent of d16133b (Fixed, move)
   - {fileID: 1280312411}
   m_Father: {fileID: 9581044}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4270,9 +4263,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5062221660514909972, guid: 5c573cf40c0a6c848bb49f444b8f1dbd, type: 3}
   m_PrefabInstance: {fileID: 243292593}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 --- !u!1 &372065416
 GameObject:
   m_ObjectHideFlags: 0
@@ -4378,117 +4369,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 372065416}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-=======
->>>>>>> parent of d16133b (Fixed, move)
---- !u!1 &374681208
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 374681209}
-  - component: {fileID: 374681212}
-  - component: {fileID: 374681211}
-  - component: {fileID: 374681210}
-  m_Layer: 9
-  m_Name: Wall (18)
-  m_TagString: Wall
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &374681209
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374681208}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -35, y: 2, z: 23.800003}
-  m_LocalScale: {x: 10, y: 6, z: 0.2}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 224075404}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &374681210
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374681208}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &374681211
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374681208}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 3fa54f2a16c129a428fff8f04bc40d4c, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &374681212
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 374681208}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
->>>>>>> parent of d16133b (Fixed, move)
 --- !u!1 &407277532
 GameObject:
   m_ObjectHideFlags: 0
@@ -5450,15 +5330,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1888831081}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   - {fileID: 874088218}
   - {fileID: 296969661}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-  - {fileID: 296969661}
->>>>>>> parent of d16133b (Fixed, move)
   - {fileID: 1792347458}
   - {fileID: 1582705607}
   - {fileID: 1008410625}
@@ -6557,17 +6430,9 @@ Transform:
   m_GameObject: {fileID: 599330899}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LocalPosition: {x: 0, y: 0, z: -115}
-=======
+
   m_LocalPosition: {x: 0, y: 0, z: -104.93}
->>>>>>> parent of d16133b (Fixed, move)
   m_LocalScale: {x: 40, y: 0.2, z: 29.931433}
-=======
-  m_LocalPosition: {x: 0, y: 0, z: -104.93}
-  m_LocalScale: {x: 80, y: 0.2, z: 29.931433}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 440754364}
@@ -7302,18 +7167,9 @@ Transform:
   m_GameObject: {fileID: 699198905}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  m_LocalPosition: {x: -20, y: 2, z: -45}
-  m_LocalScale: {x: 30, y: 5.94696, z: 0.19823201}
-=======
+
   m_LocalPosition: {x: -20, y: 2, z: -34.22}
   m_LocalScale: {x: 28, y: 6, z: 0.20000002}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-  m_LocalPosition: {x: -20, y: 2, z: -34.22}
-  m_LocalScale: {x: 27.75248, y: 5.94696, z: 0.19823201}
->>>>>>> parent of d16133b (Fixed, move)
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 224075404}
@@ -11099,27 +10955,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1392449108520828691, guid: 58d12e023abf5124b9ec436ec410f106, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< HEAD
-<<<<<<< HEAD
-      value: 4.943
-      objectReference: {fileID: 0}
-    - target: {fileID: 1392449108520828691, guid: 58d12e023abf5124b9ec436ec410f106, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.633
-=======
+
       value: 11.202475
       objectReference: {fileID: 0}
     - target: {fileID: 1392449108520828691, guid: 58d12e023abf5124b9ec436ec410f106, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.0224215
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-      value: 3.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1392449108520828691, guid: 58d12e023abf5124b9ec436ec410f106, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.03
->>>>>>> parent of d16133b (Fixed, move)
       objectReference: {fileID: 0}
     - target: {fileID: 1392449108520828691, guid: 58d12e023abf5124b9ec436ec410f106, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15036,62 +14877,13 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.01, y: 0.009999999, z: 0.010000001}
   m_Center: {x: -4.656613e-10, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
---- !u!1001 &1472875880
-=======
+
 --- !u!1001 &1498895574
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-<<<<<<< HEAD
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5154097261559000661, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_Name
-      value: StandingLamp (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -17.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.10000038
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 108.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.4100235
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.912075
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 131.587
-      objectReference: {fileID: 0}
-    - target: {fileID: 5534036130551952623, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-=======
     m_TransformParent: {fileID: 1088137753}
     m_Modifications:
     - target: {fileID: 1623218213596726970, guid: 330df7e978c887145b96c0531d14d927, type: 3}
@@ -15143,7 +14935,6 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 9039798574803678196, guid: 330df7e978c887145b96c0531d14d927, type: 3}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
@@ -15151,18 +14942,13 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-<<<<<<< HEAD
-  m_SourcePrefab: {fileID: 100100000, guid: 3bb43786ab5c63944ae1d5dbba9cc36c, type: 3}
-=======
   m_SourcePrefab: {fileID: 100100000, guid: 330df7e978c887145b96c0531d14d927, type: 3}
 --- !u!4 &1498895575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9039798574803678196, guid: 330df7e978c887145b96c0531d14d927, type: 3}
   m_PrefabInstance: {fileID: 1498895574}
   m_PrefabAsset: {fileID: 0}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
->>>>>>> parent of d16133b (Fixed, move)
+
 --- !u!1001 &1504182289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18346,15 +18132,7 @@ RectTransform:
   - {fileID: 157638973}
   - {fileID: 1100544315}
   - {fileID: 740731246}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  - {fileID: 1844444393}
   - {fileID: 555562241}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-  - {fileID: 555562241}
->>>>>>> parent of d16133b (Fixed, move)
   - {fileID: 1076211414}
   - {fileID: 487293049}
   - {fileID: 1436754857}
@@ -18556,11 +18334,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e26c892391977746b69f08f570cb2a2, type: 3}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> parent of d16133b (Fixed, move)
 --- !u!1 &1819770251
 GameObject:
   m_ObjectHideFlags: 0
@@ -18590,17 +18363,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-<<<<<<< HEAD
   - {fileID: 239458180}
   - {fileID: 1836963528}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-  - {fileID: 1836963528}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> parent of d16133b (Fixed, move)
 --- !u!1001 &1830388766
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20983,15 +20749,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6420227264705033442, guid: 2ad671309cc78a046aaad9c796a9cd94, type: 3}
       propertyPath: m_LocalPosition.z
-<<<<<<< HEAD
-<<<<<<< HEAD
       value: 100.18
-=======
-      value: 85
->>>>>>> parent of ffea2aa (Merge branch 'main' of https://github.com/Boburo43/Fisch-Barny-The-Great-Escape)
-=======
-      value: 110
->>>>>>> parent of d16133b (Fixed, move)
       objectReference: {fileID: 0}
     - target: {fileID: 6420227264705033442, guid: 2ad671309cc78a046aaad9c796a9cd94, type: 3}
       propertyPath: m_LocalRotation.w
