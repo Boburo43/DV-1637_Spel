@@ -12,14 +12,9 @@ public class Hints : MonoBehaviour
     [SerializeField] GameObject hint3;
     [SerializeField] GameObject hint4;
     [SerializeField] GameObject hint5;
-    [SerializeField] GameObject room1;
-    [SerializeField] GameObject room2;
-    [SerializeField] GameObject room3;
-    [SerializeField] GameObject room4;
-    [SerializeField] GameObject room5;
     bool showQ = false;
     bool showH = false;
-    int hintIndex = 1;
+    public int hintIndex = 1;
     float timer = 0;
 
     // Start is called before the first frame update
@@ -127,31 +122,38 @@ public class Hints : MonoBehaviour
         }
 
     }
+    
     private void OnTriggerEnter(Collider col)
     {
-        if (!showH)
-        {
-            showQ = true;
-        }
+
+        Debug.Log("Something is triggered");
+        Debug.Log("Name: " + col.gameObject.name);
+        
         if (col.gameObject.CompareTag("Player"))
         {
-            if (col == room1)
+            if (!showH)
             {
+                showQ = true;
+            }
+            if (col.gameObject.GetComponent<BoxCollider>())
+            {                                
+                Debug.Log("Triggered room 1");
                 hintIndex = 1;
             }
-            else if (col == room2)
+            else if (col.gameObject.transform.parent)
             {
+                Debug.Log("Triggered room 2") ;
                 hintIndex = 2;
             }
-            else if (col == room3)
+            else if (col)
             {
                 hintIndex = 3;
             }
-            else if (col == room4)
+            else if (col)
             {
                 hintIndex = 4;
             }
-            else if (col == room5)
+            else if (col)
             {
                 hintIndex = 5;
             }
