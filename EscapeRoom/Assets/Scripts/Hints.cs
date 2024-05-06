@@ -49,19 +49,19 @@ public class Hints : MonoBehaviour
         {
             qHint.SetActive(false);
         }
-        if(Input.GetKey(KeyCode.H)) 
+        if (Input.GetKey(KeyCode.H))
         {
             timer = 4f;
         }
         if (Input.GetKey(KeyCode.H) || timer != 0)
         {
-            if(timer > 0)
+            if (timer > 0)
             {
                 timer -= Time.deltaTime;
             }
             if (hintIndex == 1)
             {
-                if(timer < 0)
+                if (timer < 0)
                 {
                     hint1.SetActive(false);
                     timer = 0;
@@ -147,7 +147,7 @@ public class Hints : MonoBehaviour
             {
                 hintIndex = 3;
             }
-            else if(col == room4)
+            else if (col == room4)
             {
                 hintIndex = 4;
             }
@@ -156,7 +156,7 @@ public class Hints : MonoBehaviour
                 hintIndex = 5;
             }
         }
-        
+
     }
 
 }
