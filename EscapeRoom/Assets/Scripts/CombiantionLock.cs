@@ -10,6 +10,7 @@ public class CombiantionLock : MonoBehaviour, IInteractable
     public GameObject Fisch;
     public GameObject Barny;
     [SerializeField] private PlayerSwitching ps;
+    public GameObject crossFade;
 
     public GameObject cam;
 
@@ -50,6 +51,8 @@ public class CombiantionLock : MonoBehaviour, IInteractable
         codeHint.text = code;
         if (isActive)
         {
+            crossFade.SetActive(false);
+            ps.enabled = false;
             cam.GetComponent<Cam>().enabled = false;
             CurserScrip.cursurActive = true;
             if(ps.camFollowFisch)
@@ -64,7 +67,9 @@ public class CombiantionLock : MonoBehaviour, IInteractable
             
         }
         else if(!isActive)
-        {
+        {   
+            ps.enabled = true;
+            crossFade.SetActive(true);
             CurserScrip.cursurActive = false;
             cam.GetComponent<Cam>().enabled = true;
             canvas.SetActive(false);

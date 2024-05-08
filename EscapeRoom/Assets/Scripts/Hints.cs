@@ -6,15 +6,21 @@ using UnityEngine;
 
 public class Hints : MonoBehaviour
 {
-    [SerializeField] private GameObject qHint;
+    [SerializeField] GameObject qHint;
     [SerializeField] GameObject hint1;
     [SerializeField] GameObject hint2;
     [SerializeField] GameObject hint3;
     [SerializeField] GameObject hint4;
     [SerializeField] GameObject hint5;
+    [SerializeField] GameObject room1;
+    [SerializeField] GameObject room2;
+    [SerializeField] GameObject room3;
+    [SerializeField] GameObject room4;
+    [SerializeField] GameObject room5;
+    public HintFunk hint;
     bool showQ = false;
     bool showH = false;
-    public int hintIndex = 1;
+    public int hintIndex = 0;
     float timer = 0;
 
     // Start is called before the first frame update
@@ -119,41 +125,42 @@ public class Hints : MonoBehaviour
 
                 }
             }
+
         }
 
+
     }
-    
     private void OnTriggerEnter(Collider col)
     {
 
         Debug.Log("Something is triggered");
         Debug.Log("Name: " + col.gameObject.name);
-        
+
         if (col.gameObject.CompareTag("Player"))
         {
             if (!showH)
             {
                 showQ = true;
             }
-            if (col.gameObject.GetComponent<BoxCollider>())
-            {                                
+            if (room1.enter == true)
+            {
                 Debug.Log("Triggered room 1");
                 hintIndex = 1;
             }
-            else if (col.gameObject.transform.parent)
+            else if (room2)
             {
-                Debug.Log("Triggered room 2") ;
+                Debug.Log("Triggered room 2");
                 hintIndex = 2;
             }
-            else if (col)
+            else if (room3)
             {
                 hintIndex = 3;
             }
-            else if (col)
+            else if (room4)
             {
                 hintIndex = 4;
             }
-            else if (col)
+            else if (room5)
             {
                 hintIndex = 5;
             }

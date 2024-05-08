@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HintFunk : MonoBehaviour
 {
+    public bool enter = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,8 +16,19 @@ public class HintFunk : MonoBehaviour
     {
         
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-
+        if (other.CompareTag("Player"))
+        {
+            enter = true;
+        }
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            enter = false;
+        }
     }
 }
