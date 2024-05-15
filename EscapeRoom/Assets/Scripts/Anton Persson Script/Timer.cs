@@ -13,6 +13,7 @@ public class Timer : MonoBehaviour
     public static bool lose = false;
 
     [SerializeField] private GameObject HalfTimeText;
+    [SerializeField] private GameObject MinuteLeftText;
     float warningActive = 5f;
 
     public TMP_Text TimerTxt;
@@ -22,6 +23,7 @@ public class Timer : MonoBehaviour
         timeLeft = 900f;
         timerOn = true;
         HalfTimeText.gameObject.SetActive(false);
+        MinuteLeftText.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -43,6 +45,11 @@ public class Timer : MonoBehaviour
                 else
                 {
                     HalfTimeText.gameObject.SetActive(false);
+                }
+                if (timeLeft <= 60 & warningActive > -5)
+                {
+                    MinuteLeftText.gameObject.SetActive(true);
+                    warningActive -= Time.deltaTime;
                 }
             }
             else
