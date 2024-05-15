@@ -109,14 +109,26 @@ public class GeneratorButton : MonoBehaviour, IInteractable
             }
             else if(gen.batteries.Count == 4)
             {
-                red.GetComponent<BoxCollider>().enabled = true;
-                green.GetComponent<BoxCollider>().enabled = true;
-                blue.GetComponent<BoxCollider>().enabled = true;
-                white.GetComponent<BoxCollider>().enabled = true;
+                red.GetComponent<Rigidbody>().isKinematic = true;
+                blue.GetComponent<Rigidbody>().isKinematic = true;
+                green.GetComponent<Rigidbody>().isKinematic = true;
+                white.GetComponent<Rigidbody>().isKinematic= true;
+
+
                 red.transform.position = dropPoint.transform.position;
                 green.transform.position = dropPoint2.transform.position;
                 blue.transform.position = dropPoint3.transform.position;
                 white.transform.position = dropPoint4.transform.position;
+
+                red.GetComponent<BoxCollider>().enabled = true;
+                green.GetComponent<BoxCollider>().enabled = true;
+                blue.GetComponent<BoxCollider>().enabled = true;
+                white.GetComponent<BoxCollider>().enabled = true;
+
+                red.GetComponent<Rigidbody>().isKinematic = false;
+                blue.GetComponent<Rigidbody>().isKinematic = false;
+                green.GetComponent<Rigidbody>().isKinematic = false;
+                white.GetComponent<Rigidbody>().isKinematic = false;
 
                 gen.batteries.Clear();
 

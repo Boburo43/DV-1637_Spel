@@ -2139,18 +2139,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b6d87069b2d1e439c3574426046112, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  qHint: {fileID: 75239761}
-  hint1: {fileID: 926406705}
-  hint2: {fileID: 2092673362}
-  hint3: {fileID: 1236331339}
-  hint4: {fileID: 461572798}
-  hint5: {fileID: 985263485}
-  room1: {fileID: 1623722356}
-  room2: {fileID: 476056193}
-  room3: {fileID: 1902265085}
-  room4: {fileID: 951058079}
-  room5: {fileID: 1437940781}
-  hintIndex: 0
 --- !u!1 &120230797
 GameObject:
   m_ObjectHideFlags: 0
@@ -11179,14 +11167,15 @@ Transform:
   - {fileID: 3001079670045314762}
   - {fileID: 166544900}
   - {fileID: 1016074154}
-  - {fileID: 1690502023}
   - {fileID: 1442681241}
   - {fileID: 252392049}
   - {fileID: 165670214}
   - {fileID: 1511733943}
   - {fileID: 741703908}
-  - {fileID: 599718824}
   - {fileID: 910361614}
+  - {fileID: 1834913437}
+  - {fileID: 1690502023}
+  - {fileID: 599718824}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1003701376
@@ -19427,6 +19416,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fisch (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3624265160028893674, guid: 457ed1e8464618044a43a0c402fc42e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.02
+      objectReference: {fileID: 0}
     - target: {fileID: 6956481738803604822, guid: 457ed1e8464618044a43a0c402fc42e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22078,7 +22071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6208251641239121264, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 79.67209
+      value: 79.45
       objectReference: {fileID: 0}
     - target: {fileID: 6208251641239121264, guid: 4f339a1a43c99fe42abf520575024e54, type: 3}
       propertyPath: m_LocalRotation.w
@@ -22289,6 +22282,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 16796405}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1834913436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1834913437}
+  m_Layer: 0
+  m_Name: Room4Doors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1834913437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1834913436}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.841581, y: 2.5234363, z: -15.205711}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1002698453}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1841771367
 GameObject:
