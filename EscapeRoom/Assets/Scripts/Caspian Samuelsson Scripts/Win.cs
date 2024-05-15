@@ -32,6 +32,8 @@ public class Win : MonoBehaviour
            
             winScreen.SetActive(true);
             Timertext.text = string.Format("You had: {0:00} : {1:00} left" , minutes, seconds);
+            CurserScrip.cursurActive = true;
+            Cursor.visible = true;
         }
     }
     private void OnTriggerEnter(Collider other)

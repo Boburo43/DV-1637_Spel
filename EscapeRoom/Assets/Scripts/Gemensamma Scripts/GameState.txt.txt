@@ -1,0 +1,1 @@
+Caspian skrev basfunktionalitet, alla har lagt till för olika gamestates. Anton Persson gjorde så att speled går att pause genom isPaused.
