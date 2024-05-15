@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 870
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalScale.y
@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 20
+      value: -5.65
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalPosition.y
@@ -30,7 +30,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalRotation.w
@@ -38,7 +38,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_LocalRotation.y
@@ -66,10 +66,43 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: ba16161ae5a86734a8fbba6a2033e50c, type: 2}
     - target: {fileID: 919132149155446097, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
       propertyPath: m_Name
-      value: Wall
+      value: WallBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1615563311993155180}
   m_SourcePrefab: {fileID: 100100000, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
+--- !u!1 &3453535231746727634 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 0c1757280db51564eb91de3809f275ab, type: 3}
+  m_PrefabInstance: {fileID: 2534403091315450755}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1615563311993155180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3453535231746727634}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.01, y: 0.009999999, z: 0.010000001}
+  m_Center: {x: 0, y: 0, z: 0.000000014901161}
